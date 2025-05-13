@@ -8,12 +8,12 @@
 }
 
 body {
-    padding-top: 105px;
+    padding-top: 0px;
     font-family: "Manrope", sans-serif;
 }
 
 :root {
-    --rød: red;
+    --navtekst: rgb(37, 40, 92);
     --bla: #dd00dd;
     --bakgrunnsfarge: black;
     --hvit: white;
@@ -39,14 +39,28 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(128, 106, 254);
-    position: fixed;
-    top: 0;
+    background-color: none;
     font-size: 20px;
     font-family: "Volkhov", serif;
 }
 
+#nav2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#nav1 {
+    background-color: var(--navtekst);
+    color: white;
+    position: fixed;
+    top: 0;
+}
+
 nav a {
+    color: var(--navtekst);
+}
+
+#nav1 a {
     color: white;
 }
 
@@ -58,6 +72,7 @@ nav>a {
     font-size: 40px;
     padding-left: 30px;
     font-weight: 800;
+    font-style: italic;
 }
 
 nav ul {
@@ -65,7 +80,7 @@ nav ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    color: white;
+    color: var(--nav);
 
 }
 
@@ -73,6 +88,72 @@ nav li {
     padding-right: 28px;
 }
 
+
+/* Første side*/
+
+#tittelforside {
+    font-size: 90px;
+    color: var(--hvit);
+    text-shadow: 2px 2px #000000;
+    font-weight: 700;
+    font-style: italic;
+    position: absolute;
+    left: 5vw;
+    top: 70vh;
+}
+.introytrecontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--navtekst);
+}
+.introcontainer {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 50px;
+    text-align: center;
+    padding: 50px;
+}
+
+.introytrecontainer h1{
+    font-size: 50px;
+    padding: 30px;
+}
+.introcontainer i {
+    font-size: 90px;
+    padding: 15px;
+}
+
+.introcontainer > div {
+    border: 1px solid var(--navtekst);
+    padding: 10px;
+    
+}
+
+.fa-plane-circle-check {
+    font-size: 40px;
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.slagordside1 {
+    display: flex;
+}
+
+.kursiv {
+    font-style: italic;
+    padding-left: 7px;
+}
+
+.introcontainer h3 {
+    font-size: 20px;
+    padding: 7px;
+}
+
+.introcontainer p {
+    font-size: 17px;
+    line-height: 27px;
+}
 
 /* Bokser som dukker opp */
 .overskriftTop2 {
@@ -142,4 +223,22 @@ nav li {
     background-color: rgba(246, 249, 250, 0.334);
     background-blend-mode: difference;
 
+}
+
+
+
+
+/* Tenk bærekraftig*/
+
+.maintog {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    top: 0;
+    z-index: -3;
+}
+
+#videotog {
+    opacity: 0.8;
 }
