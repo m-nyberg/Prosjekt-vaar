@@ -41,7 +41,7 @@
         .container>a {
             height: 15vw;
             width: 15vw;
-            border: 1px solid black;
+            border: 3px solid black;
             border-radius: 5px;
             display: flex;
             justify-content: center;
@@ -50,12 +50,14 @@
             font-weight: 600;
             text-decoration: none;
             color: white;
+            text-shadow: 3px black;
             background-size: 100% 100%;
         }
 
         a:hover {
-            color: rgb(80, 89, 215);
-            background-image: cross-fade(2);
+            background-color: rgba(149, 198, 206, 0.334);
+            background-blend-mode: difference;
+            
         }
 
         button {
