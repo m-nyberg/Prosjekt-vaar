@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 2.5vw;
+            width: 70vw;
+            
+        }
+
+
+        .container>div {
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 5px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .container>a {
+            height: 15vw;
+            width: 15vw;
+            border: 1px solid black;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: rgb(80, 89, 215);
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Våre mest populære reisedestinasjoner</h1>
+    <div class="container"></div>
+
+
+
+    <script>
+        let timer = setInterval(leggTilDiv, 150)
+        let count = 0
+        const containerElm = document.querySelector(".container")
+
+        const listeByer = ["Roma", "London", "Berlin", "Madrid", "Roma", "London", "Berlin", "Madrid", "Roma", "London", "Berlin", "Madrid",]
+        const listeFarger = ["Bisque", "MistyRose", "PowderBlue", "Thistle", "WhiteSmoke", "Bisque", "MistyRose", "PowderBlue", "Thistle", "WhiteSmoke", "Bisque", "MistyRose", "PowderBlue", "Thistle", "WhiteSmoke"]
+
+        function leggTilDiv() {
+            const link = document.createElement("a")
+            link.href = listeByer[count] + ".html"
+            link.textContent = listeByer[count]
+            link.style.backgroundColor = listeFarger[count]
+
+            containerElm.appendChild(link)
+
+            count = count + 1
+
+            if (count >= 12) {
+                clearInterval(timer)
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
