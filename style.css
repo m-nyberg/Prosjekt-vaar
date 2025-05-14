@@ -93,14 +93,28 @@ nav li {
 
 #tittelforside {
     font-size: 90px;
-    color: var(--hvit);
-    text-shadow: 2px 2px #000000;
+    color: var(--navtekst);
+    /*text-shadow: 2px 2px #fcfbfb;*/
     font-weight: 700;
     font-style: italic;
     position: absolute;
     left: 5vw;
-    top: 70vh;
+    top: 60vh;
+    font-family: "Volkhov", serif;
 }
+
+#undertittelforside {
+    font-size: 40px;
+    color: var(--navtekst);
+    /*text-shadow: 2px 2px #fcfbfb;*/
+    font-weight: 700;
+    font-style: italic;
+    position: absolute;
+    left: 5vw;
+    top: 75vh;
+    font-family: "Volkhov", serif;
+}
+
 .introytrecontainer {
     display: flex;
     flex-direction: column;
