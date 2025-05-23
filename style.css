@@ -10,6 +10,7 @@
 body {
     padding-top: 0px;
     font-family: "Manrope", sans-serif;
+    margin-top: 100px;
 }
 
 :root {
@@ -89,7 +90,48 @@ nav li {
 }
 
 
+/* Footer*/
+
+footer {
+    margin-top: 100px;
+    width: 100vw;
+    height: fit-content;
+    background-color: var(--navtekst);
+    display: grid;
+    grid-template-columns: repeat(4, 25vw);
+}
+
+footer > div {
+    padding: 40px;
+    color: white;
+}
+
+footer h4 {
+    padding-bottom: 10px;
+}
+
+#nyhetsbrev {
+    margin-top: 10px;
+}
+
+footer li {
+    list-style-type: none;
+    font-size: 14px;
+    line-height: 27px;
+}
+
+
+
+
+
+
+
+
 /* Første side*/
+
+#bodyindex {
+    margin: 0px;
+}
 
 #tittelforside {
     font-size: 90px;
@@ -215,7 +257,6 @@ nav li {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    font-size: 20px;
 }
 
 .container>a {
@@ -226,7 +267,7 @@ nav li {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: white;
     text-shadow: 3px black;
@@ -239,7 +280,9 @@ nav li {
 
 }
 
-
+.none {
+    display: none;
+}
 
 
 /* Tenk bærekraftig*/

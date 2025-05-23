@@ -36,7 +36,7 @@
         </ul>
     </nav>
     <div class="ytterste">
-        <div onclick="hei()" class="overskriftTop2">
+        <div class="overskriftTop2">
             <h1>Sjekk ut våre mest populære reisedestinasjoner</h1>
             <i class="fa-solid fa-sort-down"></i>
         </div>
@@ -46,32 +46,49 @@
 
 
     <script>
+
+        const topEl = document.querySelector(".overskriftTop2")
+        let antKlikk = 0
+        topEl.addEventListener("click", hei)
+        const containerElm = document.querySelector(".container")
+
         function hei() {
-            let timer = setInterval(leggTilDiv, 250)
-            let count = 0
-            const containerElm = document.querySelector(".container")
-
-            const listeByer = ["Hallstatt, Østerrike", "Annecysjøen, Frankrike", "Hraunfossar, Island", "Koh Chang, Thailand", "Gardasjøen, Italia", "Ahr-dalen, Tyskland", "Djerba, Tunisia", "Karakol, Kyrgyzstan", "La Paz, Bolivia", "Palau", "Korfu, Hellas", "Lofoten, Norge",]
-            const listeLand = ["Østerrike", "Frankrike", "Island", "Thailand", "Italia", "Tyskland", "Tunisia", "Kyrgyzstan", "Bolivia", "", "Hellas", "Norge",]
-            const listeByerLiten = ["hallstatt", "annecy", "hraunfossar", "koh", "garda", "ahr", "djerba", "karakol", "lapaz", "palau", "korfu", "lofoten",]
-            const listeFarger = ["Bisque", "MistyRose", "PowderBlue", "Thistle", "WhiteSmoke", "Bisque", "MistyRose", "PowderBlue", "Thistle", "WhiteSmoke", "Bisque", "MistyRose", "PowderBlue", "Thistle", "WhiteSmoke"]
-
-            function leggTilDiv() {
-                const link = document.createElement("a")
-                link.href = listeByerLiten[count] + ".html"
-                link.innerHTML = listeByer[count]
-                //link.style.backgroundColor = listeFarger[count]
-                link.style.backgroundImage = "url(bilder/" + listeByerLiten[count] + ".jpg)"
-
-                containerElm.appendChild(link)
-
-                count = count + 1
-
-                if (count >= 12) {
-                    clearInterval(timer)
+            if (antKlikk == 0){
+                let timer = setInterval(leggTilDiv, 250)
+                let count = 0
+    
+                const listeByer = ["Hallstatt, Østerrike", "Annecysjøen, Frankrike", "Hraunfossar, Island", "Koh Chang, Thailand", "Gardasjøen, Italia", "Ahr-dalen, Tyskland", "Djerba, Tunisia", "Karakol, Kyrgyzstan", "La Paz, Bolivia", "Palau", "Korfu, Hellas", "Lofoten, Norge",]
+                const listeLand = ["Østerrike", "Frankrike", "Island", "Thailand", "Italia", "Tyskland", "Tunisia", "Kyrgyzstan", "Bolivia", "", "Hellas", "Norge",]
+                const listeByerLiten = ["hallstatt", "annecy", "hraunfossar", "koh", "garda", "ahr", "djerba", "karakol", "lapaz", "palau", "korfu", "lofoten",]
+                const listeFarger = ["Bisque", "MistyRose", "PowderBlue", "Thistle", "WhiteSmoke", "Bisque", "MistyRose", "PowderBlue", "Thistle", "WhiteSmoke", "Bisque", "MistyRose", "PowderBlue", "Thistle", "WhiteSmoke"]
+    
+                function leggTilDiv() {
+                    containerElm.classList.remove("none")
+                    const link = document.createElement("a")
+                    link.href = listeByerLiten[count] + ".html"
+                    link.innerHTML = listeByer[count]
+                    //link.style.backgroundColor = listeFarger[count]
+                    link.style.backgroundImage = "url(bilder/" + listeByerLiten[count] + ".jpg)"
+    
+                    containerElm.appendChild(link)
+    
+                    count = count + 1
+    
+                    if (count >= 12) {
+                        clearInterval(timer)
+                    }
+    
                 }
 
+            } else if (antKlikk % 2 == 0){
+                containerElm.classList.remove("none")
+            } else {
+                console.log("hei")
+                containerElm.classList.add("none")
+
             }
+
+            antKlikk ++
 
         }
 
