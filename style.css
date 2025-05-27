@@ -53,6 +53,7 @@ nav {
     top: 0;
     left: 0;
 }
+
 #nav1 {
     background-color: var(--lysgrå);
     color: white;
@@ -106,7 +107,7 @@ footer {
     grid-template-columns: repeat(4, 25vw);
 }
 
-footer > div {
+footer>div {
     padding: 40px;
     color: white;
 }
@@ -131,7 +132,7 @@ footer li {
 }
 
 
-footer li > a {
+footer li>a {
     color: var(--hvit);
 }
 
@@ -179,6 +180,7 @@ footer li > a {
     align-items: center;
     color: var(--navtekst);
 }
+
 .introcontainer {
     display: grid;
     grid-template-columns: repeat(3, 300px);
@@ -187,22 +189,24 @@ footer li > a {
     padding: 50px;
 }
 
-.introytrecontainer h1{
+.introytrecontainer h1 {
     font-size: 50px;
     padding: 30px;
 }
+
 .introcontainer i {
     font-size: 90px;
     padding: 15px;
 }
 
-.introcontainer > div {
+.introcontainer>div {
     border: 1px solid var(--navtekst);
     padding: 10px;
-    
+
 }
 
-.introytrecontainer > .fa-plane-departure, .fa-plane-departure .front{
+.introytrecontainer>.fa-plane-departure,
+.fa-plane-departure .front {
     font-size: 40px;
     padding: 20px;
     padding-top: 40px;
@@ -234,14 +238,15 @@ footer li > a {
 /* Side Topplisten */
 
 .ytterste {
-    width: 70vw;        /*media, sette bredere*/
+    width: 70vw;
+    /*media, sette bredere*/
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
 }
 
-.ytterste > h1 {
+.ytterste>h1 {
     color: var(--navtekst);
     font-size: 50px;
     font-family: "Volkhov", serif;
@@ -249,7 +254,7 @@ footer li > a {
     padding: 45px;
 }
 
-.ytterste > p {
+.ytterste>p {
     color: black;
     font-size: 25px;
     text-align: center;
@@ -307,11 +312,12 @@ footer li > a {
     color: var(--navtekst);
 
 }
+
 .overskriftTop2:hover {
     color: var(--lysgrå);
 }
 
-.overskriftTop2 > i {
+.overskriftTop2>i {
     font-size: 40px;
     padding-left: 10px;
 }
@@ -367,7 +373,28 @@ footer li > a {
 }
 
 
+/* Side favoritter */
 
+.hjerte {
+    height: 100px;
+    width: auto;
+    filter: invert(100%) brightness(30%);
+}
+
+.favoverskrifter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.favoverskrifter > h1 {
+    color: var(--navtekst);
+    font-size: 50px;
+    font-family: "Volkhov", serif;
+    font-weight: 100;
+    padding: 50px;
+}
 
 /* Side miljø*/
 
@@ -382,4 +409,12 @@ footer li > a {
 
 #videotog {
     opacity: 0.8;
+}
+
+
+.blaaboks {
+    background-color: var(--navtekst);
+    width: 100vw;
+    height: 200vh;
+    display: block;
 }
