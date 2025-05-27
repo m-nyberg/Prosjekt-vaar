@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Topplista</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -14,7 +14,7 @@
 <body>
     <nav id="nav1">
         <a href="index.html">
-            <i class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-plane-departure"></i>
             Neste Stopp
         </a>
         <ul>
@@ -35,65 +35,78 @@
             </li>
         </ul>
     </nav>
+
     <div class="ytterste">
+        <h1>Topplisten</h1>
+        <p>Det kan være vanskelig å bestemme seg for hvilket sted man skal reise. Så hvorfor ikke ta inspirasjon fra
+            andre?
+            Her har vi de mest populæere reisedestinasjonene våre. Det er disse stedene flest har valgt. Ta en kikk, og
+            drøm deg bort! </p>
+
         <div class="overskriftTop2">
             <h1>Sjekk ut våre mest populære reisedestinasjoner</h1>
-            <i class="fa-solid fa-sort-down"></i>
+            <i class="fa-solid fa-sort-down pil"></i>
         </div>
         <div class="container"></div>
+
+        <div class="meldingercontainer">
+            <div class="gridmeldingos"> Les noen av våre tilbakemeldinger! </div>
+            <div><i class="fa-regular fa-message"></i></div>
+            <div>"Vi pleier egentlig å unngå de mest populære stedene, men vi ble positivt overrasket! Selv om
+                destinasjonen var kjent, fant vi rolige perler og møtte nesten ingen andre nordmenn. En perfekt blanding
+                av liv og avslapning!"</div>
+            <div></div>
+            <div></div>
+            <div>"Utrolig hvor bra alt var lagt til rette - fra transport til restauranter og utflukter. Det var enkelt
+                å slappe av og bare nyte ferien. Hit vil vi tilbake!"</div>
+            <div><i class="fa-regular fa-message speil"></i></div>
+            <div><i class="fa-regular fa-message"></i></div>
+            <div>"Det er ikke uten grunn at dette stedet er populært! Fantastisk natur, deilig mat og hyggelige folk.
+                Anbefales virkelig – vi drømmer oss fortsatt tilbake."</div>
+            <div></div>
+        </div>
+
     </div>
 
+    <footer>
+        <div>
+            <h4>Om oss</h4>
+            <ul>
+                <li>Vi hjelper deg med å finne det perfekte reisemålet for deg og reisefølget ditt. </li>
+            </ul>
+        </div>
+        <div>
+            <h4>Kontakt</h4>
+            <ul>
+                <li>E-post: kontakt@nestestopp.no</li>
+                <li>Telefon: +47 999 99 999</li>
+                <li>Adresse: Gjønnesjordet 30, 1357 Bekkestua</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Nyhetsbrev</h4>
+            <p>Meld deg på nyhetsbrevet vårt for å få månedlige reisetips.</p>
+            <input type="text" id="nyhetsbrev" placeholder="Epostadresse" />
+            <button id="nyhetsbrevbtn" onclick="tømInput()">Meld meg på</button>
+        </div>
+        <div>
+            <h4>Følg oss</h4>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com">Facebook</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com">Instagram</a>
+                </li>
+                <li>
+                    <a href="https://youtube.com">Youtube</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
 
-    <script>
-
-        const topEl = document.querySelector(".overskriftTop2")
-        let antKlikk = 0
-        topEl.addEventListener("click", hei)
-        const containerElm = document.querySelector(".container")
-
-        function hei() {
-            if (antKlikk == 0){
-                let timer = setInterval(leggTilDiv, 250)
-                let count = 0
-    
-                const listeByer = ["Hallstatt, Østerrike", "Annecysjøen, Frankrike", "Hraunfossar, Island", "Koh Chang, Thailand", "Gardasjøen, Italia", "Ahr-dalen, Tyskland", "Djerba, Tunisia", "Karakol, Kyrgyzstan", "La Paz, Bolivia", "Palau", "Korfu, Hellas", "Lofoten, Norge",]
-                const listeLand = ["Østerrike", "Frankrike", "Island", "Thailand", "Italia", "Tyskland", "Tunisia", "Kyrgyzstan", "Bolivia", "", "Hellas", "Norge",]
-                const listeByerLiten = ["hallstatt", "annecy", "hraunfossar", "koh", "garda", "ahr", "djerba", "karakol", "lapaz", "palau", "korfu", "lofoten",]
-                const listeFarger = ["Bisque", "MistyRose", "PowderBlue", "Thistle", "WhiteSmoke", "Bisque", "MistyRose", "PowderBlue", "Thistle", "WhiteSmoke", "Bisque", "MistyRose", "PowderBlue", "Thistle", "WhiteSmoke"]
-    
-                function leggTilDiv() {
-                    containerElm.classList.remove("none")
-                    const link = document.createElement("a")
-                    link.href = listeByerLiten[count] + ".html"
-                    link.innerHTML = listeByer[count]
-                    //link.style.backgroundColor = listeFarger[count]
-                    link.style.backgroundImage = "url(bilder/" + listeByerLiten[count] + ".jpg)"
-    
-                    containerElm.appendChild(link)
-    
-                    count = count + 1
-    
-                    if (count >= 12) {
-                        clearInterval(timer)
-                    }
-    
-                }
-
-            } else if (antKlikk % 2 == 0){
-                containerElm.classList.remove("none")
-            } else {
-                console.log("hei")
-                containerElm.classList.add("none")
-
-            }
-
-            antKlikk ++
-
-        }
-
-        //hvis tid, endre onclick til addeventlistener slik at boksene fjernes hvis man trykker to ganger, og ikke dobbelt så mange
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

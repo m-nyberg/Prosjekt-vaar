@@ -20,6 +20,7 @@ body {
     --hvit: white;
     --skyggeoverskrift: rgb(214, 38, 38);
     --overskrift: #7e0e0e;
+    --lysgrå: rgb(209, 216, 217);
 
 }
 
@@ -30,6 +31,8 @@ img {
 a {
     text-decoration: none;
 }
+
+
 
 /* Navbar */
 
@@ -51,7 +54,7 @@ nav {
     left: 0;
 }
 #nav1 {
-    background-color: var(--navtekst);
+    background-color: var(--lysgrå);
     color: white;
     position: fixed;
     top: 0;
@@ -62,7 +65,7 @@ nav a {
 }
 
 #nav1 a {
-    color: white;
+    color: var(--navtekst);
 }
 
 nav a:hover {
@@ -90,6 +93,8 @@ nav li {
 }
 
 
+
+
 /* Footer*/
 
 footer {
@@ -112,6 +117,11 @@ footer h4 {
 
 #nyhetsbrev {
     margin-top: 10px;
+    height: 25px;
+}
+
+#nyhetsbrevbtn {
+    height: 25px;
 }
 
 footer li {
@@ -121,16 +131,22 @@ footer li {
 }
 
 
+footer li > a {
+    color: var(--hvit);
+}
 
 
 
 
 
-
-/* Første side*/
+/* Index */
 
 #bodyindex {
     margin: 0px;
+}
+
+#forsidebilde {
+    height: 100vh;
 }
 
 #tittelforside {
@@ -141,7 +157,7 @@ footer li {
     font-style: italic;
     position: absolute;
     left: 5vw;
-    top: 60vh;
+    top: 55vh;
     font-family: "Volkhov", serif;
 }
 
@@ -186,7 +202,7 @@ footer li {
     
 }
 
-.fa-plane-circle-check {
+.introytrecontainer > .fa-plane-departure, .fa-plane-departure .front{
     font-size: 40px;
     padding: 20px;
     padding-top: 40px;
@@ -211,30 +227,96 @@ footer li {
     line-height: 27px;
 }
 
+
+
+
+
+/* Side Topplisten */
+
+.ytterste {
+    width: 70vw;        /*media, sette bredere*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.ytterste > h1 {
+    color: var(--navtekst);
+    font-size: 50px;
+    font-family: "Volkhov", serif;
+    font-weight: 100;
+    padding: 45px;
+}
+
+.ytterste > p {
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.fa-message {
+    font-size: 70px;
+    color: var(--navtekst);
+}
+
+.speil {
+    transform: scaleX(-1)
+}
+
+.meldingercontainer {
+    border: 2px solid var(--navtekst);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 10vh 60vh 10vh;
+    align-items: center;
+    row-gap: 70px;
+    column-gap: 20px;
+    margin-top: 80px;
+    padding: 40px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.gridmeldingos {
+    grid-column: 1/4;
+    text-align: center;
+    font-size: 28px;
+    color: var(--navtekst);
+    font-family: "Volkhov", serif;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
 /* Bokser som dukker opp */
 .overskriftTop2 {
     display: flex;
     flex-direction: row;
-    font-size: 20px;
-    align-items: flex-end;
-    padding: 40px;
+    font-size: 16px;
+    align-items: center;
+    padding: 50px;
+    color: var(--navtekst);
 
+}
+.overskriftTop2:hover {
+    color: var(--lysgrå);
 }
 
 .overskriftTop2 > i {
-    font-size: 60px;
+    font-size: 40px;
     padding-left: 10px;
 }
 
 
-
-
-.ytterste {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 
 .container {
@@ -285,7 +367,9 @@ footer li {
 }
 
 
-/* Tenk bærekraftig*/
+
+
+/* Side miljø*/
 
 .maintog {
     width: 100vw;

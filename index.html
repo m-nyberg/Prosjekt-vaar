@@ -1,74 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body id="bodyindex">
     <nav id="nav2">
         <a href="index.html">
-            <i class="fa-solid fa-plane-circle-check"></i>
-            Neste Stopp 
+            <i class="fa-solid fa-plane-departure front"></i>
+            Neste Stopp
         </a>
         <ul>
             <li>
-                <a href="Top.html">
+                <a href="top.html">
                     Topplisten
                 </a>
             </li>
             <li>
                 <a href="favoritter.html">
-                    Våre favoritter 
+                    Våre favoritter
                 </a>
             </li>
             <li>
                 <a href="miljoe.html">
-                    Tenk bærekraftig 
+                    Tenk bærekraftig
                 </a>
             </li>
         </ul>
     </nav>
     <main>
-        <img src="bilder/landskap4.jpg" alt="">
+        <img id="forsidebilde" src="bilder/landskap4.jpg" alt="">
         <h1 id="tittelforside">Finn ditt Neste Stopp</h1>
         <h2 id="undertittelforside">Din digitale reiseguide</h2>
 
     </main>
-    
-    <div class="introytrecontainer">
-        <i class="fa-solid fa-plane-circle-check"></i>
-       <div class="slagordside1">
-           <h2>Finn ditt   </h2>
-           <h2 class="kursiv">   Neste Stopp</h2>
-       </div>
 
-       <h1>Hva kan vi hjelpe deg med?</h1>
-       <p>La oss hjelpe deg med å finne din drømmereise! Sjekk ut våre mest populære reisesteder, hotellanbefalinger og tips for å reise miljøvennlig. </p>
+    <div class="introytrecontainer">
+        <i class="fa-solid fa-plane-departure front"></i>
+        <div class="slagordside1">
+            <h2>Finn ditt </h2>
+            <h2 class="kursiv"> Neste Stopp</h2>
+        </div>
+
+        <h1>Hva kan vi hjelpe deg med?</h1>
+        <p>La oss hjelpe deg med å finne din drømmereise! Sjekk ut våre mest populære reisesteder, hotellanbefalinger og
+            tips for å reise miljøvennlig. </p>
 
         <div class="introcontainer">
-            <div>
+            <div class="introramme">
                 <i class="fa-regular fa-compass"></i>
                 <h3>Våre beste reisetips</h3>
-                <p>Her har vi samlet våre beste reisetips! Enten du er på utkikk etter en storbyferie, flotte fjell i Alpene eller en avslappende strandferie, så har vi destinasjonen for deg. </p>
-    
+                <p>Her har vi samlet våre beste reisetips! Enten du er på utkikk etter en storbyferie, flotte fjell i
+                    Alpene eller en avslappende strandferie, så har vi destinasjonen for deg. </p>
+
             </div>
-            <div>
+            <div class="introramme">
                 <i class="fa-solid fa-tree"></i>
                 <h3>Miljøbevisste reiser</h3>
-                <p>Vi hjelper deg med å velge klimavennlige reisemål, og hjelper deg med å planlegge en tur med minimalt utslipp.</p>
+                <p>Vi hjelper deg med å velge klimavennlige reisemål, og hjelper deg med å planlegge en tur med minimalt
+                    utslipp.</p>
             </div>
-            <div>
+            <div class="introramme">
                 <i class="fa-solid fa-user-group"></i>
                 <h3>Vi gir deg personlig oppfølging</h3>
-                <p>Vi hjelper deg med å finne det perfekte reisemålet for deg og reisefølget ditt. Følg den veiledende nettsiden vår, eller ta kontakt med oss på mail for en personlig oppfølging. </p>
-                
+                <p>Vi hjelper deg med å finne det perfekte reisemålet for deg og reisefølget ditt. Følg den veiledende
+                    nettsiden vår, eller ta kontakt med oss på mail for en personlig oppfølging. </p>
+
             </div>
-            
+
         </div>
 
     </div>
@@ -77,7 +83,7 @@
         <div>
             <h4>Om oss</h4>
             <ul>
-                <li>Litt informasjon om oss</li>
+                <li>Vi hjelper deg med å finne det perfekte reisemålet for deg og reisefølget ditt. </li>
             </ul>
         </div>
         <div>
@@ -92,14 +98,20 @@
             <h4>Nyhetsbrev</h4>
             <p>Meld deg på nyhetsbrevet vårt for å få månedlige reisetips.</p>
             <input type="text" id="nyhetsbrev" placeholder="Epostadresse" />
-            <button>Meld meg på</button>
+            <button id="nyhetsbrevbtn" onclick="tømInput()">Meld meg på</button>
         </div>
         <div>
             <h4>Følg oss</h4>
             <ul>
-                <li>Facebook</li>
-                <li>Instagram</li>
-                <li>Youtube</li>
+                <li>
+                    <a href="https://www.facebook.com">Facebook</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com">Instagram</a>
+                </li>
+                <li>
+                    <a href="https://youtube.com">Youtube</a>
+                </li>
             </ul>
         </div>
     </footer>
@@ -107,4 +119,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
