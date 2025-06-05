@@ -119,10 +119,13 @@ footer h4 {
 #nyhetsbrev {
     margin-top: 10px;
     height: 25px;
+    background-color: white;
+    color: var(--navtekst);
 }
 
 #nyhetsbrevbtn {
     height: 25px;
+    margin-top: 10px;
 }
 
 footer li {
@@ -135,6 +138,8 @@ footer li {
 footer li>a {
     color: var(--hvit);
 }
+
+
 
 
 
@@ -396,6 +401,60 @@ footer li>a {
     padding: 50px;
 }
 
+#favgrid {
+    width: 85vw;
+    display: grid;
+    grid-template-columns: 37vw 37vw;
+    color: var(--navtekst);
+    row-gap: 50px;
+    margin: auto;
+
+}
+
+.favdiv {
+    display: flex;
+    border: 2px solid var(--navtekst);
+    border-radius: 32px;
+    margin-left: 50px;
+}
+
+.favtekstdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.favdiv h3 {
+    font-family: "Volkhov", serif;
+    font-size: 27px;
+}
+
+.favdiv h4 {
+    font-family: "Volkhov", serif;
+    font-size: 22px;
+}
+
+.favtekst {
+    display: flex;
+    padding-top: 25px;
+    font-size: 18px;
+}
+
+.favbilde {
+    height: 180px;
+    width: 220px;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.pris {
+    color: red;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 800;
+}
+
+
 /* Side miljø*/
 
 .maintog {
@@ -483,7 +542,7 @@ footer li>a {
 
 
 
-
+/* Media tilpassninger */
 
 @media(max-width: 1030px) {
     .miljoegrid {
@@ -505,6 +564,15 @@ footer li>a {
         font-size: 60px;
     }
 
+    footer {
+        grid-template-columns: repeat(2, 40vw);
+        padding-left: 10vw;
+    }
+
+    .introcontainer {
+        grid-template-columns: repeat(3, 200px);
+    }
+    
 }
 
 @media(max-width: 800px) {
@@ -532,6 +600,14 @@ footer li>a {
 
     nav ul {
         flex-direction: column;
+    }
+
+    footer {
+        grid-template-columns: 80vw;
+    }
+
+    .introcontainer {
+        grid-template-columns:300px;
     }
 
 }
