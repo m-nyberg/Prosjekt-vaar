@@ -384,13 +384,14 @@ footer li>a {
     height: 100px;
     width: auto;
     filter: invert(100%) brightness(30%);
+    z-index: -1;
 }
 
 .favoverskrifter {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    padding-top: 70px;
 }
 
 .favoverskrifter>h1 {
@@ -398,24 +399,36 @@ footer li>a {
     font-size: 50px;
     font-family: "Volkhov", serif;
     font-weight: 100;
-    padding: 50px;
+    padding-right: 45px;
 }
 
 #favgrid {
-    width: 85vw;
     display: grid;
-    grid-template-columns: 37vw 37vw;
+    grid-template-columns: 500px 500px;
     color: var(--navtekst);
-    row-gap: 50px;
+    gap: 50px;
     margin: auto;
-
+    justify-content: center;
 }
 
 .favdiv {
     display: flex;
     border: 2px solid var(--navtekst);
     border-radius: 32px;
-    margin-left: 50px;
+}
+
+.storfavdiv {
+    grid-row: 2/4;
+    grid-column: 2/3;
+}
+
+.storfavdiv2 {
+    grid-row: 5/7;
+}
+.storfavdiv, .storfavdiv2 {
+    background-color: var(--navtekst);
+    color: white;
+
 }
 
 .favtekstdiv {
@@ -423,6 +436,11 @@ footer li>a {
     flex-direction: column;
     justify-content: center;
     padding-left: 20px;
+}
+
+.favdiv h2 {
+    font-size: 57px;
+    font-family: "Volkhov", serif;
 }
 
 .favdiv h3 {
@@ -453,6 +471,17 @@ footer li>a {
     padding-right: 8px;
     font-weight: 800;
 }
+
+.favhovedtekst {
+   width: 85vw;
+   margin: auto;
+   padding: 50px;
+   font-size: 22px;
+   text-align: center;
+   line-height: 37px;
+}
+
+
 
 
 /* Side miljø*/
@@ -573,6 +602,23 @@ footer li>a {
         grid-template-columns: repeat(3, 200px);
     }
     
+    .ytterste {
+        width: 85vw;
+    }
+
+    #favgrid {
+        grid-template-columns: 350px 350px;
+    }
+
+    .favbilde {
+        height: 120px;
+        width: 150px;
+    }
+
+    .favdiv h2 {
+        font-size: 40px;
+    }
+   
 }
 
 @media(max-width: 800px) {
@@ -610,4 +656,26 @@ footer li>a {
         grid-template-columns:300px;
     }
 
+    .container {
+        width: 90%;
+    }
+
+    #favgrid {
+        grid-template-columns: 400px;
+    }
+
+    .favdiv {
+        height: 200px;
+    }
+
+    .favbilde {
+        height: 200px;
+        width: 250px;
+    }
+
+    .storfavdiv, .storfavdiv2 {
+        grid-column: auto;
+        grid-row: auto;
+        height: 300px;
+    }
 }
